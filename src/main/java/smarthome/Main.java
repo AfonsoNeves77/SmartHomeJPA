@@ -68,7 +68,11 @@ public class Main {
 
                 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
+                System.out.println("Aqui deve tar true");
+
                 System.out.println(roomRepositoryJPA.isPresent(roomIDVO));
+
+                System.out.println("Aqui deve dar false");
 
                 RoomIDVO randomRoomID = new RoomIDVO(UUID.randomUUID());
                 System.out.println(roomRepositoryJPA.isPresent(randomRoomID));
@@ -83,7 +87,6 @@ public class Main {
                 RoomNameVO resultRoomName = roomService.updateName(roomIDVO,roomNameVOChanged);
 
                 System.out.println(resultRoomName.getValue());
-
 
                 /////////////////////////////////////////////////////////////////////////////////////
 
